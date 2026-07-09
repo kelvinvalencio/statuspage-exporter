@@ -69,11 +69,10 @@ with DockerHun pull limits.
 
 | Registry        | Repository                                                                                                                         |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------|
-| Github Registry | [ghcr.io/sergeyshevch/statuspage-exporter](https://github.com/sergeyshevch/statuspage-exporter/pkgs/container/statuspage-exporter) |
-| DockerHub       | [sergeykons/statuspage-exporter](https://hub.docker.com/r/sergeykons/statuspage-exporter)                                          |
+| DockerHub       | [kelvinvalencio/statuspage-exporter](https://hub.docker.com/r/kelvinvalencio/statuspage-exporter)                                          |
 
 ```bash
-docker run -p 9747:9747 ghcr.io/sergeyshevch/statuspage-exporter --statuspages=https://www.githubstatus.com, https://https://jira-software.status.atlassian.com
+docker run -p 9747:9747 kelvinvalencio/statuspage-exporter --statuspages=https://www.githubstatus.com, https://https://jira-software.status.atlassian.com
 ```
 
 ### Helm
