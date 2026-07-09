@@ -13,6 +13,8 @@ func StatusToMetricValue(status string) types.Status {
 		return types.PartialOutageStatus
 	case "major_outage":
 		return types.MajorOutageStatus
+	case "under_maintenance":
+		return types.PlannedMaintenanceStatus
 	default:
 		return types.UnknownStatus
 	}

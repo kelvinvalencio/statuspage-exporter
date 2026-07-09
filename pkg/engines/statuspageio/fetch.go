@@ -35,7 +35,7 @@ func constructURL(log *zap.Logger, targetURL string) (string, error) {
 		panic(err)
 	}
 
-	parsedURL.Path = "/api/v2/components.json"
+	parsedURL.Path = "/api/v2/summary.json"
 
 	if parsedURL.Host == "" {
 		log.Error(utils.ErrInvalidURL.Error(), zap.String("url", targetURL))
@@ -92,7 +92,7 @@ func FetchStatusPage(
 			result.Page.Name,
 			targetURL,
 			component.Name,
-		).Set(float64(IndicatorToMetricValue(component.Status)))
+		).Set(float64(StatusToMetricValue(component.Status)))
 	}
 
 	overallStatus.WithLabelValues(
